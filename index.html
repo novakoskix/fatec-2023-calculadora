@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141313;
+            color: rgb(255, 246, 246);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(255, 246, 246);
+        }
+        form {
+            background-color: rgba(19, 18, 18, 0.527);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        input[type="number"] {
+            border: 1px solid rgb(236, 226, 226);
+            border-radius: 3px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #44c0df;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+        span {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Novak</h1>
+
+    <form>
+        <label for="n1">Primeiro Número:</label><br />
+        <input id="n1" type="number" /><br />
+        <label for="n2">Segundo Número:</label><br />
+        <input id="n2" type="number" /><br />
+        
+        <button type="button" onclick="somar()">Somar</button>
+        <button type="button" onclick="subtrair()">Subtrair</button>    
+        <button type="button" onclick="multiplicar()">Multiplicar</button>
+        <button type="button" onclick="dividir()">Dividir</button>
+        <br /><br />
+        O resultado é: <span></span>
+    </form>
+
+    <script>
+        var n1 = document.querySelector("#n1");
+        var n2 = document.querySelector("#n2");
+        var resultado = document.querySelector("span");
+
+        function somar(){
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value);
+        }
+        function subtrair(){
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value);
+        }
+        function multiplicar(){
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value);
+        }
+        function dividir(){
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value);
+        }
+    </script>
+</body>
+</html>
